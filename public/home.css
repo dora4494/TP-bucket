@@ -24,17 +24,15 @@
     padding: 5px;
 }
 
-nav {
 
-    text-align: center;
+
+.lien-about {
+    color: lightgreen;
 }
 
-
-.lien-accueil {
+.lien-list {
     color: lightgreen;
-    display: block;
-    margin-right: 1100px;
-
+    margin-left: 15px;
 }
 
 .container-main {
@@ -51,3 +49,9 @@ nav {
     font-size: 12px; /* Ajustez la taille de la police au besoin */
     color: gray; /* Changez la couleur si nécessaire */
 }
+
+nav {
+
+    margin-left: 20px;
+}
+
