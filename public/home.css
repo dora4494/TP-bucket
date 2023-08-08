@@ -1,0 +1,53 @@
+* {
+    font-family: 'Mynerve', cursive;
+}
+
+.container-header {
+    background-color: goldenrod;
+    height: 100px;
+}
+
+.Bucket-List {
+
+    color: black;
+    padding: 5px;
+    margin-top: 50px;
+}
+
+.logo {
+    align-items: center;
+}
+.logo-and-title {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding: 5px;
+}
+
+nav {
+
+    text-align: center;
+}
+
+
+.lien-accueil {
+    color: lightgreen;
+    display: block;
+    margin-right: 1100px;
+
+}
+
+.container-main {
+    height: 400px;
+}
+
+.container-footer {
+   text-align: center;
+    position: relative; /* Ajoutez cette ligne */
+    top: 20px;
+}
+
+.footer-text {
+    font-size: 12px; /* Ajustez la taille de la police au besoin */
+    color: gray; /* Changez la couleur si nécessaire */
+}
