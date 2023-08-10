@@ -5,6 +5,12 @@
 {% endblock %}
 
 {% block body %}
-    <div>list</div>
+    <h1>Tous les souhaits</h1>
+    {% for wish in wishes %}
+        <div>
+            <a href="{{ path('wish_details', {'wishes' : wish.test}) }}">
+                {{ wish.title }}
+            </a></div>
+    {% endfor %}
 {% endblock %}
 
