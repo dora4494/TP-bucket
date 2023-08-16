@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Wwish;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -20,6 +21,26 @@ class WwishRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Wwish::class);
     }
+
+
+    public function findAllPublished() :Paginator
+    {
+        $query =  $this->createQueryBuilder('w')
+            ->leftJoin('w.category', 'c')
+            ->addSelect('c')
+            ->andWhere('w.isPublished = true')
+            ->addOrderBy('w.dateCreated', 'DESC')
+            ->setMaxResults(10)
+           ->getQuery();
+
+        $paginator = new Paginator($query);
+        return $paginator;
+
+}
+
+
+
+
 
 //    /**
 //     * @return Wwish[] Returns an array of Wwish objects

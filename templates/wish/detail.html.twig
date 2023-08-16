@@ -1,18 +1,17 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
+
+{% endblock %}
+
+{% block body %}
     <div>
-    <p>{{ wish.title }}</p>
-        <p>{{ wish.author}}</p>
-        <p>{{ wish.dateCreated | date('d/m/y H:i') }}</p>
+        <p>{{ wish.title }}</p>
         <p>{{ wish.description }}</p>
+        <p> {{wish.category.getName() }}</p>
 
 
 
     </div>
-{% endblock %}
-
-{% block body %}
-
 {% endblock %}
 
